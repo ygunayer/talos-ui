@@ -4,9 +4,9 @@ var config = require("../build/config"),
 	express = require("express"),
 	_ = require("underscore"),
 	elastic = require("elasticsearch"),
-    bodyParser = require("body-parser"),
-    errorHandler = require("errorhandler"),
-    methodOverride = require("method-override"),
+	bodyParser = require("body-parser"),
+	errorHandler = require("errorhandler"),
+	methodOverride = require("method-override"),
 	app = express();
 
 var initServer = function() {
@@ -47,8 +47,8 @@ var initServer = function() {
 		if(req.path.indexOf("/api/") === 0)
 			next();
 		else
-		    // Just send the index.html for other files to support HTML5Mode
-		    res.sendFile("index.html", { root: publicDir });
+			// Just send the index.html for other files to support HTML5Mode
+			res.sendFile("index.html", { root: publicDir });
 	});
 
 	app.get("/api/search", function(req, res) {
