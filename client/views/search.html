@@ -1,0 +1,7 @@
+<ui-select ng-model="$parent.selected" theme="bootstrap" title="Search for a file name">
+	<ui-select-match placeholder="Search for a file name">{{ $select.selected.title }}</ui-select-match>
+	<ui-select-choices repeat="file in searchResults" refresh="doSearch($select.search)" refresh-delay=".5">
+		<strong>{{ file.title }}</strong>
+		<div>{{ file.input | limitTo:140 }}</div>
+	</ui-select-choices>
+</ui-select>

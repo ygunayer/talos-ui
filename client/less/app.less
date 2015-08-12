@@ -1,0 +1,43 @@
+@import "../../node_modules/bootstrap/less/bootstrap.less";
+
+@import (inline) "../../node_modules/ui-select/dist/select.min.css";
+@import (inline) "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+@import "_bootswatch.less";
+@import "_variables.less";
+
+body {
+	padding-top: 50px;
+}
+
+.panel-heading.clearfix {
+	.panel-title {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.flatline {
+	.well {
+		margin-bottom: 0;
+	}
+}
+
+.highlight {
+	&.success {
+		color: @state-success-text;
+		background-color: @state-success-bg;
+	}
+	&.warning {
+		color: @state-warning-text;
+		background-color: @state-warning-bg;
+	}
+	&.danger {
+		color: @state-danger-text;
+		background-color: @state-danger-bg;
+	}
+	&.info {
+		color: @state-info-text;
+		background-color: @state-info-bg;
+	}
+}

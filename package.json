@@ -1,0 +1,75 @@
+{
+  "name": "taloscompendium-ui",
+  "version": "1.0.0",
+  "description": "The Talos Compendium UI",
+  "scripts": {
+    "start": "node node_modules/gulp/bin/gulp dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/ygunayer/talos-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.3",
+    "angular-bootstrap": "^0.12.2",
+    "angular-ui-router": "^0.2.15",
+    "body-parser": "^1.13.3",
+    "bootstrap": "^3.3.5",
+    "browserify": "^11.0.1",
+    "browserify-shim": "^3.8.10",
+    "del": "^1.2.0",
+    "elasticsearch": "^6.0.0",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^1.2.5",
+    "gulp-less": "^3.0.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "method-override": "^2.3.5",
+    "run-sequence": "^1.1.2",
+    "ui-select": "^0.11.2",
+    "underscore": "^1.8.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "underscore": {
+      "exports": "_",
+      "depends": [
+        "jquery"
+      ]
+    },
+    "angular": {
+      "exports": "angular",
+      "depends": [
+        "jquery"
+      ]
+    },
+    "angular-ui-router": {
+      "depends": [
+        "angular"
+      ]
+    },
+    "angular-ui-bootstrap": {
+      "depends": [
+        "angular"
+      ]
+    }
+  }
+}

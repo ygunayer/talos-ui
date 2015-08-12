@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+	<div class="panel-heading clearfix">
+		<span class="panel-title">Find a File</span>
+	</div>
+	<div class="panel-body">
+		<div ng-search-box selected="selected"></div>		
+	</div>
+</div>
+<div class="panel panel-default" ng-show="!!file">
+	<div class="panel-heading clearfix">
+		<div class="pull-right">
+			<div class="btn-group">
+				<button class="btn btn-default btn-xs" ng-model="displayMode" btn-radio="'encoded'" title="Show Encoded Text">
+					<i class="fa fa-eye-slash"></i>
+					Original
+				</button>
+				<button class="btn btn-default btn-xs" ng-model="displayMode" btn-radio="'decoded'" title="Show Decoded Text">
+					<i class="fa fa-eye"></i>
+					Decoded
+				</button>
+				<button class="btn btn-default btn-xs" ng-model="displayMode" btn-radio="'split'" title="Show Both in Split View">
+					<i class="fa fa-columns"></i>
+					Both
+				</button>
+			</div>
+		</div>
+		<h2 class="panel-title">{{ file.title }}</h2>
+	</div>
+	<div class="panel-body">
+		<div class="row flatline">
+			<div ng-hide="displayMode == 'decoded'" ng-class="{ 'col-md-6': displayMode == 'split', 'col-md-12': displayMode == 'encoded' }">
+				<div class="well well-sm" ng-bind-html="file.encoded | unsafe"></div>
+			</div>
+			<div ng-hide="displayMode == 'encoded'" ng-class="{ 'col-md-6': displayMode == 'split', 'col-md-12': displayMode == 'decoded' }">
+				<div class="well well-sm" ng-bind-html="file.decoded | unsafe"></div>
+			</div>
+		</div>
+	</div>
+</div>
