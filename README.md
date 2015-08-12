@@ -3,6 +3,8 @@ The UI and web app components of The Talos Compendium, a text database for [The 
 
 For the data generation component of the project, see [ygunayer/talos-decoder](https://github.com/ygunayer/talos-decoder)
 
+![http://i.imgur.com/0RDefqV.png](http://i.imgur.com/0RDefqV.png "Screenshot")
+
 ## About
 [The Talos Principle](http://www.croteam.com/talosprinciple/), a philosophical first-person puzzle game made by Croteam, the developers of the Serious Sam series, features a set of library computer terminals scattered around its ruined, virtual world. These computer terminals contain texts from various kinds of communication medium, all retrieved from the outside (or "real") world.
 
