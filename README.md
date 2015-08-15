@@ -20,9 +20,9 @@ There are three display modes: original, decoded and both. In the "original" dis
 The following are needed to run the project:
 - Node (tested w/ 0.12.7)
 - NPM (tested w/ 2.11.3)
-- An ElasticSearch installation
+- An Elastic installation
 
-Before running the project, check the ElasticSearch configuration at ```build/config.js```, and make sure that all NPM packages are installed by running ```npm install```
+Before running the project, check the Elastic configuration at ```build/config.js```, and make sure that all NPM packages are installed by running ```npm install```
 
 When ready, simply navigate to the root folder of the project (where ```package.json``` is located) and then run the following command:
 
@@ -34,6 +34,6 @@ To send feedback, request a feature or to report an error, please open an issue.
 ## What's Missing
 - Not enough tests (none at all in the UI component)
 - Even though the code itself does not contain anything from the game itself, I'm not sure about which license to use, so there's no license yet
-- Both original and decoded texts as well as the file names and the key they're stored in the game assets as are all indexed in ElasticSearch, but the search only operates on the filename field as a ```prefix``` search
-- The encoded text segments are captured blindly, so some texts might have been decoded unnecessarily, incorrectly, or might not even have been decoded at all. To address this issue, the extraction process might be improved, or some manual or pre-defined post processes might be constructed to patch the data in ElasticSearch
+- Both original and decoded texts as well as the file names and the key they're stored in the game assets as are all indexed in Elastic, but the search only operates on the filename field as a ```prefix``` search
+- The encoded text segments are captured blindly, so some texts might have been decoded unnecessarily, incorrectly, or might not even have been decoded at all. To address this issue, the extraction process might be improved, or some manual or pre-defined post processes might be constructed to patch the data in Elastic
 

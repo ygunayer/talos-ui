@@ -6,9 +6,9 @@
     "start": "node node_modules/gulp/bin/gulp dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/ygunayer/talos-ui.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ygunayer/talos-ui.git"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "method-override": "^2.3.5",
+    "prerender-node": "^2.0.2",
     "run-sequence": "^1.1.2",
     "ui-select": "^0.11.2",
     "underscore": "^1.8.3",

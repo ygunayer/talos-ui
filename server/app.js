@@ -7,6 +7,7 @@ var config = require("../build/config"),
 	bodyParser = require("body-parser"),
 	errorHandler = require("errorhandler"),
 	methodOverride = require("method-override"),
+	prerender = require("prerender-node"),
 	app = express();
 
 var initServer = function() {
@@ -85,6 +86,12 @@ var initServer = function() {
 			handleError(req, res, err);
 		});
 	});
+
+	var prerenderToken = config.server.prerenderToken;
+	if(!!prerenderToken) {
+		app.use(prerender.set("prerenderToken", prerenderToken));
+		console.log("Prerender configured.");
+	}
 
 	app.listen(config.server.port);
 	console.log("Server is now listening on port " + config.server.port + ", will serve static files from " + publicDir);
