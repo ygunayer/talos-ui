@@ -44,12 +44,8 @@ var initServer = function() {
 		app.use(dir, express.static(publicDir + dir));
 	});
 
-	app.all("/*", function(req, res, next) {
-		if(req.path.indexOf("/api/") === 0)
-			next();
-		else
-			// Just send the index.html for other files to support HTML5Mode
-			res.sendFile("index.html", { root: publicDir });
+	app.all("/", function(req, res, next) {
+		res.sendFile("index.html", { root: publicDir });
 	});
 
 	app.get("/api/search", function(req, res) {
